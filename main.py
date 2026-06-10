@@ -1,28 +1,19 @@
 Web VPython 3.2
+  
+import random
 
 box = sphere(size=vector(10, 10, 10), opacity=0.3, color=color.gray(0.5))
-
 balls = []
 
-for i in range(1, 46):
+for i in range(46) :
+    
+    balls.append(sphere(radius=0.4,pos = vec(0,0,0)))
 
-    while True:
-        pos_vec = vector.random() 
-        if mag(pos_vec) <= 1: 
-            break
+while True :
+    rate(100)
+    k = keysdown()
+    if ' ' in k :
+        for i in range(46) :
+        balls[i].pos.x = balls[i].pos.x + random.uniform(-1,1)
+        balls[i].pos.y = balls[i].pos.y + random.uniform(-1,1)
             
-        
-            
-    if i <= 10: c = color.yellow
-    elif i <= 20: c = color.blue
-    elif i <= 30: c = color.red
-    elif i <= 40: c = color.black
-    else: c = color.green
-    
-    s = sphere(radius=0.3, color=c)
-    t = text(text=str(i), pos=vector(-0.15, -0.1, 0.3), height=0.2, color=color.white)
-    
-    b = compound([s, t])
-    b.pos = pos_vec
-    
-    balls.append(b)
