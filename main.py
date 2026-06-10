@@ -14,6 +14,6 @@ while True :
     k = keysdown()
     if ' ' in k :
         for i in range(46) :
-        balls[i].pos.x = balls[i].pos.x + random.uniform(-1,1)
-        balls[i].pos.y = balls[i].pos.y + random.uniform(-1,1)
+            balls[i].pos.x = balls[i].pos.x + random.uniform(-1,1)
+            balls[i].pos.y = balls[i].pos.y + random.uniform(-1,1)
             
